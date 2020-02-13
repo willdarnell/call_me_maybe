@@ -9,44 +9,41 @@ class BusinessCardScreen extends StatefulWidget {
 class BusinessCardState extends State<BusinessCardScreen> {
   @override 
   Widget build(BuildContext context) {
-    return Padding(
+    return 
+      Container(
+        color: Colors.amber,
+        child: Padding(
       padding: EdgeInsets.all(30),
       child:
-      Column(children: <Widget>[
-      Row(
+      Column(
         children: <Widget>[
-            Container(
-            width: 100.00,
-            height: 100.00,
-            decoration: new BoxDecoration(
-            image: new DecorationImage(
-            image: ExactAssetImage('assets/3x3_Bob_Loblaw.png'),
-            fit: BoxFit.fitHeight,
-  
-      ),
-  ))
-          
-          
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          SizedBox(
+            child: Image.asset('assets/3x3_Bob_Loblaw.png'),
+            width: 150,
+            height: 150
+          )
           ],
       ), 
       SizedBox(height: 10),
-
       Row(
         children: <Widget>[
-          Expanded(child: Text('Bob Loblaw', textAlign: TextAlign.center),)
-        ],
+          Expanded(child: Text('Bob Loblaw', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Sriracha'),)
+          )],
       ),
        SizedBox(height: 10),
        Row(
         children: <Widget>[
-          Expanded(child: Text('Attorney At Law', textAlign: TextAlign.center,),)
+          Expanded(child: Text('Attorney At Law', textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Sriracha')),)
         ]
       ),
       SizedBox(height: 10),
       Row(
         children: <Widget>[
           Expanded(child: Padding(padding: EdgeInsets.all(20), child: GestureDetector(
-            child: Text('713-222-Tips', textAlign: TextAlign.center,), 
+            child: Text('713-222-Tips', textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Sriracha')), 
             onTap: () => launch('sms:5555555555'),)),)
         ]
       ),
@@ -54,12 +51,12 @@ class BusinessCardState extends State<BusinessCardScreen> {
       Row(
         children: <Widget>[
           Expanded(child: GestureDetector(
-            child: Text('github.com/bobloblaw', textAlign: TextAlign.left,),
+            child: Text('github.com/bobloblaw', textAlign: TextAlign.left, style: TextStyle(fontFamily: 'Sriracha')),
             onTap: () => launch('http:github.com/bobloblaw'),
           )
           ),
-          Expanded(child: Text('bobloblaw@fakemail.com', textAlign: TextAlign.right,),)
+          Expanded(child: Text('bobloblaw@fakemail.com', textAlign: TextAlign.right, style: TextStyle(fontFamily: 'Sriracha')),)
         ]
-      )],));
+      )],)));
   }
 }
