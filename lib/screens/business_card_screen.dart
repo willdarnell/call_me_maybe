@@ -15,9 +15,18 @@ class BusinessCardState extends State<BusinessCardScreen> {
       Column(children: <Widget>[
       Row(
         children: <Widget>[
-          Center(
-              child: Image.asset('assets/3X3_Bob_Loblaw.png'),
-              )
+            Container(
+            width: 100.00,
+            height: 100.00,
+            decoration: new BoxDecoration(
+            image: new DecorationImage(
+            image: ExactAssetImage('assets/3x3_Bob_Loblaw.png'),
+            fit: BoxFit.fitHeight,
+  
+      ),
+  ))
+          
+          
           ],
       ), 
       SizedBox(height: 10),
@@ -37,14 +46,18 @@ class BusinessCardState extends State<BusinessCardScreen> {
       Row(
         children: <Widget>[
           Expanded(child: Padding(padding: EdgeInsets.all(20), child: GestureDetector(
-            onTap: () => launch('sms:5555555'),
-            child: Text('713-222-Tips', textAlign: TextAlign.center,))),)
+            child: Text('713-222-Tips', textAlign: TextAlign.center,), 
+            onTap: () => launch('sms:5555555555'),)),)
         ]
       ),
       SizedBox(height: 10),
       Row(
         children: <Widget>[
-          Expanded(child: Text('github.com/bobloblaw', textAlign: TextAlign.left,),),
+          Expanded(child: GestureDetector(
+            child: Text('github.com/bobloblaw', textAlign: TextAlign.left,),
+            onTap: () => launch('http:github.com/bobloblaw'),
+          )
+          ),
           Expanded(child: Text('bobloblaw@fakemail.com', textAlign: TextAlign.right,),)
         ]
       )],));
