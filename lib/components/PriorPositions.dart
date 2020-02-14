@@ -26,7 +26,7 @@ class PriorPositions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Row(children: <Widget>[
-          Text('$title', style: TextStyle(fontFamily: 'Montserrat',))
+          Text('$title', style: TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold,))
         ],),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +35,7 @@ class PriorPositions extends StatelessWidget {
         ]),
         Row(
           children: <Widget>[
-            Flexible( child: Text('$description', style: TextStyle(fontFamily: 'Roboto',))
+            Flexible( child: Text('$description', style: TextStyle(fontFamily: 'Roboto', fontStyle: FontStyle.italic,))
             )]
         ),
       ]
