@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:call_me/screens/business_card_screen.dart';
+import 'package:call_me/screens/resume_screen.dart';
 
 class App extends StatelessWidget {
   @override
@@ -13,9 +14,9 @@ class App extends StatelessWidget {
 class MainTabController extends StatelessWidget {
   
   static const tabs = [
-      Tab(text: 'Business Card'),
-      Tab(text: 'Resume'),
-      Tab(text: 'Predictor')
+      Tab(icon: Icon(Icons.contact_phone,)),
+      Tab(icon: Icon(Icons.description)),
+      Tab(icon: Icon(Icons.help),)
     ];
   
   final screens = [
@@ -42,12 +43,7 @@ class MainTabController extends StatelessWidget {
 
 
 
-class ResumeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text('Health Screen'));
-  }
-}
+
 
 class PredictorScreen extends StatelessWidget {
   @override

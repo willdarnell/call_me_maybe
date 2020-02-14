@@ -15,31 +15,35 @@ class BusinessCardState extends State<BusinessCardScreen> {
         child: Padding(
       padding: EdgeInsets.all(30),
       child:
+      FractionallySizedBox(
+       
+        child:
       Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-      Row(
+        Flexible(
+          fit: FlexFit.loose,
+          child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(
             child: Image.asset('assets/3x3_Bob_Loblaw.png'),
-            width: 150,
-            height: 150
+            width: 225,
+            height: 225
           )
           ],
-      ), 
-      SizedBox(height: 10),
+      )), 
       Row(
         children: <Widget>[
           Expanded(child: Text('Bob Loblaw', textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Sriracha'),)
           )],
       ),
-       SizedBox(height: 10),
        Row(
         children: <Widget>[
           Expanded(child: Text('Attorney At Law', textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Sriracha')),)
         ]
       ),
-      SizedBox(height: 10),
       Row(
         children: <Widget>[
           Expanded(child: Padding(padding: EdgeInsets.all(20), child: GestureDetector(
@@ -47,7 +51,6 @@ class BusinessCardState extends State<BusinessCardScreen> {
             onTap: () => launch('sms:5555555555'),)),)
         ]
       ),
-      SizedBox(height: 10),
       Row(
         children: <Widget>[
           Expanded(child: GestureDetector(
@@ -55,8 +58,8 @@ class BusinessCardState extends State<BusinessCardScreen> {
             onTap: () => launch('http:github.com/bobloblaw'),
           )
           ),
-          Expanded(child: Text('bobloblaw@fakemail.com', textAlign: TextAlign.right, style: TextStyle(fontFamily: 'Sriracha')),)
+          Expanded(child: Text('bobloblaw@fakemail.com', textAlign: TextAlign.right, style: TextStyle(fontFamily: 'Sriracha'),),)
         ]
-      )],)));
+      )],))));
   }
 }
