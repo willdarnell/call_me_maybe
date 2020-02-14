@@ -32,6 +32,7 @@ class MainTabController extends StatelessWidget {
         initialIndex: 0,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.blue[300],
             title: Text('Call Me Maybe'),
             bottom: TabBar(tabs: tabs)
           ),

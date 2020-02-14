@@ -11,10 +11,11 @@ class BusinessCardState extends State<BusinessCardScreen> {
   Widget build(BuildContext context) {
     return 
       Container(
-        color: Colors.amber,
+        color: Colors.amber[200],
         child: Padding(
       padding: EdgeInsets.all(30),
       child:
+      SafeArea(child: 
       FractionallySizedBox(
        
         child:
@@ -60,6 +61,6 @@ class BusinessCardState extends State<BusinessCardScreen> {
           ),
           Expanded(child: Text('bobloblaw@fakemail.com', textAlign: TextAlign.right, style: TextStyle(fontFamily: 'Sriracha'),),)
         ]
-      )],))));
+      )],)))));
   }
 }
